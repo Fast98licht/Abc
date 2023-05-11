@@ -7,7 +7,7 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: black;
+        background-color: white;
         margin: 0;
         padding: 0;
         color: white;
@@ -41,26 +41,65 @@
         font-size: 18px;
         font-weight: bold;
     }
+
+    .dropdown {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 </style>
 </head>
 <body>
-<div class="feed">
-    <div class="product">
-        <h2 class="product-title">Product 1</h2>
-        <p class="product-description">This is the description of Product 1.</p>
-        <p class="product-price">$9.99</p>
+    <div class="dropdown">
+        <button>Menu</button>
+        <div class="dropdown-content">
+            <a href="page1.html">Page 1</a>
+            <a href="page2.html">Page 2</a>
+            <a href="page3.html">Page 3</a>
+        </div>
     </div>
-    <div class="product">
-        <h2 class="product-title">Product 2</h2>
-        <p class="product-description">This is the description of Product 2.</p>
-        <p class="product-price">$19.99</p>
+    <div class="feed">
+        <div class="product">
+            <h2 class="product-title">Product 1</h2>
+            <p class="product-description">This is the description of Product 1.</p>
+            <p class="product-price">$9.99</p>
+        </div>
+        <div class="product">
+            <h2 class="product-title">Product 2</h2>
+            <p class="product-description">This is the description of Product 2.</p>
+            <p class="product-price">$19.99</p>
+        </div>
+        <div class="product">
+            <h2 class="product-title">Product 3</h2>
+            <p class="product-description">This is the description of Product 3.</p>
+            <p class="product-price">$29.99</p>
+        </div>
+        <!-- Add more product listings here -->
     </div>
-    <div class="product">
-        <h2 class="product-title">Product 3</h2>
-        <p class="product-description">This is the description of Product 3.</p>
-        <p class="product-price">$29.99</p>
-    </div>
-    <!-- Add more product listings here -->
-</div>
 </body>
 </html>
+
