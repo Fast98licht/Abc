@@ -71,13 +71,8 @@
             return false;
         }
 
-        if (usernameInput.value !== 'apple') {
-            usernameInput.classList.add('error');
-            return false;
-        }
-
-        if (passwordInput.value !== 'puppy') {
-            passwordInput.classList.add('error');
+        if (usernameInput.value !== 'apple' || passwordInput.value !== 'puppy') {
+            alert('Incorrect username or password');
             return false;
         }
 
@@ -96,4 +91,5 @@
 </div>
 </body>
 </html>
+
 
