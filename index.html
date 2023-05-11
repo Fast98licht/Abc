@@ -66,13 +66,17 @@
         usernameInput.classList.remove('error');
         passwordInput.classList.remove('error');
 
-        // Replace these conditions with your own validation logic
-        if (usernameInput.value === '') {
+        if (usernameInput.value === 'apple' && passwordInput.value === 'puppy') {
+            window.location.href = 'next-page.html';
+            return false;
+        }
+
+        if (usernameInput.value !== 'apple') {
             usernameInput.classList.add('error');
             return false;
         }
 
-        if (passwordInput.value === '') {
+        if (passwordInput.value !== 'puppy') {
             passwordInput.classList.add('error');
             return false;
         }
