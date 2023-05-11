@@ -20,7 +20,7 @@
         width: 300px;
         height: 300px;
         border-radius: 50%;
-        background-color: #00f;
+        background-color: #f1f1f1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -40,6 +40,10 @@
         border-radius: 3px;
     }
 
+    .error {
+        border: 1px solid red;
+    }
+
     button {
         width: 80%;
         padding: 10px;
@@ -54,13 +58,38 @@
         background-color: #0077b3;
     }
 </style>
+<script>
+    function validateForm() {
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        
+        usernameInput.classList.remove('error');
+        passwordInput.classList.remove('error');
+
+        // Replace these conditions with your own validation logic
+        if (usernameInput.value === '') {
+            usernameInput.classList.add('error');
+            return false;
+        }
+
+        if (passwordInput.value === '') {
+            passwordInput.classList.add('error');
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </head>
 <body>
 <div class="circle-container">
     <h1>Alphabet of Life</h1>
-    <input type="text" placeholder="Username" />
-    <input type="password" placeholder="Password" />
-    <button>Login</button>
+    <form onsubmit="return validateForm();">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button type="submit">Login</button>
+    </form>
 </div>
 </body>
 </html>
+
