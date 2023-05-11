@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feed</title>
+<title>Marketplace</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
         padding: 0 20px;
     }
 
-    .post {
+    .product {
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 20px;
@@ -27,18 +27,40 @@
         background-color: #f9f9f9;
     }
 
-    .post-title {
+    .product-title {
         font-size: 24px;
         margin-bottom: 10px;
     }
 
-    .post-content {
+    .product-description {
         font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        font-size: 18px;
+        font-weight: bold;
     }
 </style>
 </head>
 <body>
+<div class="feed">
+    <div class="product">
+        <h2 class="product-title">Product 1</h2>
+        <p class="product-description">This is the description of Product 1.</p>
+        <p class="product-price">$9.99</p>
+    </div>
+    <div class="product">
+        <h2 class="product-title">Product 2</h2>
+        <p class="product-description">This is the description of Product 2.</p>
+        <p class="product-price">$19.99</p>
+    </div>
+    <div class="product">
+        <h2 class="product-title">Product 3</h2>
+        <p class="product-description">This is the description of Product 3.</p>
+        <p class="product-price">$29.99</p>
+    </div>
+    <!-- Add more product listings here -->
 </div>
 </body>
 </html>
-
