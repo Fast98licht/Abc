@@ -29,14 +29,15 @@
         font-size: 100px;
         display: inline-block;
         animation: spin 10s linear infinite;
+        transform: perspective(600px) rotateY(45deg);
     }
 
     @keyframes spin {
         from {
-            transform: rotateY(0deg);
+            transform: perspective(600px) rotateY(45deg) rotateZ(0deg);
         }
         to {
-            transform: rotateY(360deg);
+            transform: perspective(600px) rotateY(45deg) rotateZ(360deg);
         }
     }
 
