@@ -26,7 +26,17 @@
     }
 
     .emoji {
-        font-size: 5rem;
+        font-size: 10rem; /* doubled the size */
+        animation: spin 5s linear infinite; /* added spinning animation */
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
 </style>
 </head>
@@ -35,4 +45,3 @@
     <div class="emoji">🌍</div>
 </body>
 </html>
-
