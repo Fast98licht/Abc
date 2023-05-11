@@ -27,15 +27,16 @@
 
     .world-emoji {
         font-size: 100px;
+        display: inline-block;
         animation: spin 10s linear infinite;
     }
 
     @keyframes spin {
         from {
-            transform: rotateX(0deg);
+            transform: rotateY(0deg);
         }
         to {
-            transform: rotateX(360deg);
+            transform: rotateY(360deg);
         }
     }
 
