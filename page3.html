@@ -85,7 +85,32 @@
       justify-content: center;
       height: 100%;
     }
+    
+    .video-item.active {
+      background-color: #ccc;
+    }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var videoItems = document.querySelectorAll(".video-item");
+      var videoPlayer = document.querySelector(".video-player video");
+
+      videoItems.forEach(function(item) {
+        item.addEventListener("click", function() {
+          var videoSrc = this.dataset.videoSrc;
+          videoPlayer.src = videoSrc;
+
+          // Remove "active" class from all video items
+          videoItems.forEach(function(item) {
+            item.classList.remove("active");
+          });
+
+          // Add "active" class to the clicked video item
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="dropdown">
@@ -100,18 +125,4 @@
   <div class="container">
     <div class="video-player">
       <video controls>
-        <source src="video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="video-list">
-      <div class="video-list-content">
-        <div class="video-item">Video 1</div>
-        <div class="video-item">Video 2</div>
-        <div class="video-item">Video 3</div>
-        <div class="video-item">Video 4</div>
-        <div class="video-item">Video 5</div>
-        <div class="video-item">Video 6</div>
-        <div class="video-item">Video 7</div>
-        <div class="video-item">Video 8</div>
-        <div class="video
+        <source src="video1.mp4
