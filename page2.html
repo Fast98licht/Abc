@@ -3,51 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feed</title>
+<title>Page 2</title>
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: white;
+        background-color: black;
         margin: 0;
         padding: 0;
+        color: white;
     }
 
-    .feed {
+    .content {
         max-width: 800px;
         margin: 40px auto;
         padding: 0 20px;
     }
 
-    .post {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 20px;
-        margin-bottom: 20px;
-        background-color: #f9f9f9;
-    }
-
-    .post-title {
+    h1 {
         font-size: 24px;
         margin-bottom: 10px;
     }
 
-    .post-content {
+    p {
         font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 </style>
 </head>
 <body>
-<div class="feed">
-    <div class="post">
-        <h2 class="post-title">Newest Post</h2>
-        <p class="post-content">This is the content of the newest post.</p>
+    <div class="dropdown">
+        <button>Menu</button>
+        <div class="dropdown-content">
+            <a href="page1.html">Page 1</a>
+            <a href="page2.html">Page 2</a>
+            <a href="page3.html">Page 3</a>
+        </div>
     </div>
-    <div class="post">
-        <h2 class="post-title">Second Newest Post</h2>
-        <p class="post-content">This is the content of the second newest post.</p>
+    <div class="content">
+        <h1>Page 2 Content</h1>
+        <p>This is the content of Page 2.</p>
     </div>
-    <!-- Add more posts here -->
-</div>
 </body>
 </html>
+
 
