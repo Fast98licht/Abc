@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .video-player {
+      flex-grow: 1;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video-player video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .video-list {
+      width: 25%;
+      overflow-y: auto;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    .video-item {
+      margin-bottom: 10px;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .video-item:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="video-player">
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-list">
+      <div class="video-item">Video 1</div>
+      <div class="video-item">Video 2</div>
+      <div class="video-item">Video 3</div>
+      <div class="video-item">Video 4</div>
+      <div class="video-item">Video 5</div>
+      <div class="video-item">Video 6</div>
+      <div class="video-item">Video 7</div>
+      <div class="video-item">Video 8</div>
+      <div class="video-item">Video 9</div>
+      <div class="video-item">Video 10</div>
+    </div>
+  </div>
+</body>
+</html>
